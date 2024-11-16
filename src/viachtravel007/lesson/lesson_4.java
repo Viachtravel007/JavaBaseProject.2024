@@ -2,6 +2,10 @@ package viachtravel007.lesson;
 
 public class lesson_4 {
     public static void main(String[] args) {
+        BasicMathExample();
+    }
+
+    public static void BasicMathExample() {
         int a = 10;
         int b = 3;
 
