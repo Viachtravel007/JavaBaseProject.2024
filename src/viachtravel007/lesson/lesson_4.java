@@ -9,7 +9,21 @@ public class lesson_4 {
 //        MobExample();
 //        Increment();
 //        MathExamples();
-        Random();
+//        Random();
+        Formatting();
+    }
+
+    private static void Formatting() {
+        double value = 10.0 / 3;
+        System.out.println("value = " + value);
+
+        double result = Math.round(100 * value) / 100.0;
+        System.out.println("result = " + result);
+
+        System.out.printf("Rounded value = %05.2f, calculated value = %05d\n", value, 123 + 10);
+        System.out.printf("|%10s |%15s |\n", "row1", "row2");
+        System.out.printf("|%10s |%15s |\n", "142", "835855");
+        System.out.printf("|%10s |%15s |\n", "421415", "1");
     }
 
     private static void Random() {
