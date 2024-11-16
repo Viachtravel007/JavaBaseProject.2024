@@ -1,6 +1,6 @@
 package viachtravel007;
 
-public class ShopOnline {
+public class ShopInfo {
     public static void main(String[] args) {
         byte number = 1;
         String client = "Zagorulko Bogdan";
