@@ -4,13 +4,26 @@ public class lesson_4 {
     public static void main(String[] args) {
 //        BasicMathExample();
 //        MobExample();
-        Increment();
+//        Increment();
+//        MathExamples();
+    }
+
+    public static void MathExamples() {
+        long value = 5;
+        double result = Math.sqrt(5 * value);
+        System.out.println("sqrt(25) = " + result);
+
+        value = 8;
+        System.out.println("cbrt(" + value + ") = " + Math.cbrt(value));
+
+        value = Math.round(Math.pow(2, 3));
+        System.out.println("value = " + value);
     }
 
     private static void Increment() {
         int a = 123;
         a += 100;
-        a += + 100 / 3 - 1;
+        a += 100 / 3 - 1;
         System.out.println("a = " + a);
 
         a++;
