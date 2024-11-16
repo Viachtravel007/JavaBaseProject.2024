@@ -1,4 +1,4 @@
-package viachtravel007;
+package viachtravel007.homework;
 
 public class ShopInfo {
     public static void main(String[] args) {
