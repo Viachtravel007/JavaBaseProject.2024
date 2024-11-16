@@ -1,11 +1,32 @@
 package viachtravel007.lesson;
 
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class lesson_4 {
     public static void main(String[] args) {
 //        BasicMathExample();
 //        MobExample();
 //        Increment();
 //        MathExamples();
+        Random();
+    }
+
+    private static void Random() {
+        Random random = new Random(1);
+        int value = random.nextInt();
+        System.out.println(value);
+        value = random.nextInt();
+        System.out.println(value);
+        value = random.nextInt(-1_000_000, 1);
+        System.out.println(value);
+        value = random.nextInt(10, 20);
+        System.out.println(value);
+        value = random.nextInt( 1,101);
+        System.out.println(value);
+
+        value = ThreadLocalRandom.current().nextInt();
+        System.out.println(value);
     }
 
     public static void MathExamples() {
