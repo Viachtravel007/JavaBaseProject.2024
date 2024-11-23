@@ -11,13 +11,24 @@ public class Lesson_5 {
         int a = 10;
         int b = 1;
 
-        if (a % 2 == 0) {
-            if (b % 2 == 0) {
-                System.out.println("00");
-            } else {
-                System.out.println("Unexpected");
-            }
+        System.out.println(" AND ");
+        if ((a % 2 == 0) & (b % 2 == 0)) {
+            System.out.println("00");
+        } else {
+            System.out.println("Unexpected");
+        }
+        System.out.println(" OR ");
+        if ((a % 2 == 0) | (b % 2 == 0)) {
+            System.out.println("00 or 10 or 01");
+        } else {
+            System.out.println("Unexpected");
+        }
 
+        System.out.println(" NEGOTIATION ");
+        if (!((a % 2 == 0) | (b % 2 == 0))) {
+            System.out.println("00 or 10 or 01");
+        } else {
+            System.out.println("Unexpected");
         }
     }
 
