@@ -9,5 +9,9 @@ public class Lesson_7 {
         for (int i = 0; i < price.length; i++) {
             System.out.println("price#" + i + " == " + price[i]);
         }
+
+        for (int current : price) {
+            System.out.println(current);
+        }
     }
 }
