@@ -61,6 +61,7 @@ public class RandomArrays {
         }
         double average = (double) sumAfterNegative / countAfterNegative;
 
+        System.out.print("Array: ");
         for (int i = 1; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
