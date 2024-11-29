@@ -9,7 +9,7 @@ public class RandomArrays {
         int[] array = new int[20];
 
         for (int i = 0; i < array.length; i++) { // наповнення масиву випадковими числами від 100 до -100
-            array[i] = random.nextInt( -100, 100);
+            array[i] = random.nextInt( -100, 101);
         }
 
         int sumNegatives = 0; // розрахунок суми всіх негативних чисел
