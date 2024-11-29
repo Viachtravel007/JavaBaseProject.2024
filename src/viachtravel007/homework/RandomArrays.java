@@ -8,18 +8,18 @@ public class RandomArrays {
         Random random = new Random();
         int[] array = new int[20];
 
-        for (int i = 0; i < array.length; i++) { // наповнення масиву випадковими числами від 100 до -100
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt( -100, 101);
         }
 
-        int sumNegatives = 0; // розрахунок суми всіх негативних чисел
+        int sumNegatives = 0;
         for (int i : array) {
             if (i < 0) {
                 sumNegatives += i;
             }
         }
 
-        int integer = 0; // кількість парних і непарних чисел
+        int integer = 0;
         int nonInteger = 0;
         for (int i : array) {
             if (i % 2 == 0) {
@@ -29,7 +29,7 @@ public class RandomArrays {
             }
         }
 
-        int minElement = array[0]; // найменший і найбільший елемент масиву (і їх індекси)
+        int minElement = array[0];
         int maxElement = array[0];
         int minIndex = 0;
         int maxIndex = 0;
@@ -44,14 +44,14 @@ public class RandomArrays {
             }
         }
 
-        int firstNegative = -1; // перший негативний елемент масиву
+        int firstNegative = -1;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 firstNegative = i;
                 break;
             }
         }
-        int sumAfterNegative = 0; // розрахунок середнього арифметичного
+        int sumAfterNegative = 0;
         int countAfterNegative = 0;
         double average = 0;
         if (firstNegative != -1) {
