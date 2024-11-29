@@ -9,7 +9,7 @@ public class RandomArrays {
         int[] array = new int[20];
 
         for (int i = 0; i < array.length; i++) { // наповнення масиву випадковими числами від 100 до -100
-            array[i] = random.nextInt( -100, 101);
+            array[i] = random.nextInt( -100, 100);
         }
 
         int sumNegatives = 0; // розрахунок суми всіх негативних чисел
@@ -53,16 +53,19 @@ public class RandomArrays {
         }
         int sumAfterNegative = 0; // розрахунок середнього арифметичного
         int countAfterNegative = 0;
+        double average = 0;
         if (firstNegative != -1) {
             for (int i = firstNegative + 1; i < array.length; i++) {
                 sumAfterNegative += array[i];
                 countAfterNegative++;
             }
         }
-        double average = (double) sumAfterNegative / countAfterNegative;
+        if (countAfterNegative > 0) {
+            average = (double) sumAfterNegative / countAfterNegative;
+        }
 
         System.out.print("Array: ");
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.printf("\nThe sum of negative numbers: " + sumNegatives);
