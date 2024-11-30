@@ -1,12 +1,16 @@
 package viachtravel007.homework;
 
+import java.util.Scanner;
 import java.util.Random;
 
 public class RandomArrays {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Write the number of array elements: ");
+        int number = scanner.nextInt();
         Random random = new Random();
-        int[] array = new int[20];
+        int[] array = new int[number];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt( -100, 101);
