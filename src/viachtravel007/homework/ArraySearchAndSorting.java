@@ -17,16 +17,16 @@ public class ArraySearchAndSorting {
         }
 
         System.out.print("Unsorted array: ");
-        PrintArray(array);
+        printArray(array);
 
-        SortArray(array);
+        sortArray(array);
 
         System.out.print("\nSorted array: ");
-        PrintArray(array);
+        printArray(array);
 
         System.out.print("\nWrite a number to search in the array: ");
         int numeric = scanner.nextInt();
-        int position = NumberSearch(array, numeric);
+        int position = numberSearch(array, numeric);
         if ( position != -1) {
             System.out.printf("The index of the number %d in the sorted array: %d", numeric, position);
         } else {
@@ -34,13 +34,13 @@ public class ArraySearchAndSorting {
         }
     }
 
-    public static void PrintArray(int[] array) {
+    public static void printArray(int[] array) {
         for (int value : array) {
             System.out.print(value + " ");
         }
     }
 
-    public static void SortArray(int[] array) {
+    public static void sortArray(int[] array) {
         int n = array.length;
         for (int i = 1; i < n; i++) {
             int key = array[i];
@@ -53,7 +53,7 @@ public class ArraySearchAndSorting {
         }
     }
 
-    public static int NumberSearch(int[] array, int numeric) {
+    public static int numberSearch(int[] array, int numeric) {
         int left = 0;
         int right = array.length - 1;
         do {
