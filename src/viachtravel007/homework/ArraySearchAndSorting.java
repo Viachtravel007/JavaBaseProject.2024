@@ -17,10 +17,30 @@ public class ArraySearchAndSorting {
         }
 
         System.out.print("Unsorted array: ");
-        for ( int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        PrintArray(array);
 
+        SortArray(array);
+
+        System.out.print("\nSorted array: ");
+        PrintArray(array);
+
+        System.out.print("\nWrite a number to search in the array: ");
+        int numeric = scanner.nextInt();
+        int position = NumberSearch(array, numeric);
+        if ( position != -1) {
+            System.out.printf("The index of the number %d in the sorted array: %d", numeric, position);
+        } else {
+            System.out.printf("There is no number %d in the array", numeric);
+        }
+    }
+
+    public static void PrintArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+    }
+
+    public static void SortArray(int[] array) {
         int n = array.length;
         for (int i = 1; i < n; i++) {
             int key = array[i];
@@ -30,20 +50,6 @@ public class ArraySearchAndSorting {
                 j--;
             }
             array[j + 1] = key;
-        }
-
-        System.out.print("\nSorted array: ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.print("\nWrite a number to search in the array: ");
-        int numeric = scanner.nextInt();
-        int position = NumberSearch(array, numeric);
-        if ( position != -1) {
-            System.out.printf("The index of the number %d in the sorted array: %d", numeric, position);
-        } else {
-            System.out.printf("There is no number %d in the array", numeric);
         }
     }
 
@@ -64,4 +70,3 @@ public class ArraySearchAndSorting {
     }
 
 }
-
