@@ -3,7 +3,7 @@ package viachtravel007.lesson;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class lesson_4 {
+public class Lesson_4 {
     public static void main(String[] args) {
 //        BasicMathExample();
 //        MobExample();
