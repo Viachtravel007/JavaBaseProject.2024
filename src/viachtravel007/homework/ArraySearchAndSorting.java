@@ -13,7 +13,7 @@ public class ArraySearchAndSorting {
         int[] array = new int[number];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt( 1, 101);
+            array[i] = random.nextInt( 1, 1001);
         }
 
         System.out.print("Unsorted array: ");
@@ -21,22 +21,15 @@ public class ArraySearchAndSorting {
             System.out.print(array[i] + " ");
         }
 
-        int steps = 0;
-        boolean sorted = false;
-        for (int j = 0; j < array.length; j++) {
-            if ( sorted ) {
-               break;
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
             }
-           sorted = true;
-            for (int i = 0; i < array.length - j- 1; i++) {
-                steps++;
-                if (array[i] > array[i + 1]) {
-                    int tmp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = tmp;
-                    sorted = false;
-                }
-            }
+            array[j + 1] = key;
         }
 
         System.out.print("\nSorted array: ");
