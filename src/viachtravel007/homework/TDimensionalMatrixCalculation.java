@@ -23,9 +23,9 @@ public class TDimensionalMatrixCalculation {
 
         productColumns(matrix);
 
-        magicSquare(matrix, rows, columns);
+        magicSquare(matrix);
 
-        if (magicSquare(matrix, rows, columns)) {
+        if (magicSquare(matrix)) {
             System.out.println("matrix is a magic square");
         } else {
             System.out.println("matrix is not a magic square");
@@ -37,7 +37,7 @@ public class TDimensionalMatrixCalculation {
         Random random = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = random.nextInt(min, max+1); // Генеруємо значення у діапазоні
+                matrix[i][j] = random.nextInt(min, max + 1); // Генеруємо значення у діапазоні
             }
         }
 
@@ -59,12 +59,10 @@ public class TDimensionalMatrixCalculation {
         int sumEvenRows = 0;
 
         for (int i = 0; i < matrix.length; i++) {
-            if (i % 2 == 0) {
-                for (int j = 0; j < matrix[i].length; j++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i % 2 == 0) {
                     sumEvenRows += matrix[i][j];
-                }
-            } else {
-                for (int j = 0; j < matrix[i].length; j++) {
+                } else {
                     sumOddRows += matrix[i][j];
                 }
             }
@@ -79,13 +77,11 @@ public class TDimensionalMatrixCalculation {
         long productOddColumns = 1;
 
         for (int j = 0; j < matrix[0].length; j++) {
-            if (j % 2 == 0) {
-                for (int i = 0; i < matrix.length; i++) {
-                    productEvenColumns *= matrix[i][j];
-                }
-            } else {
-                for (int i = 0; i < matrix.length; i++) {
-                    productOddColumns *= matrix[i][j];
+            for (int[] row : matrix) {
+                if (j % 2 == 0) {
+                    productEvenColumns *= row[j];
+                } else {
+                    productOddColumns *= row[j];
                 }
             }
         }
@@ -94,9 +90,9 @@ public class TDimensionalMatrixCalculation {
         System.out.println("Product of odd columns = " + productOddColumns);
     }
 
-    private static boolean magicSquare(int[][] matrix, int rows, int columns) {
+    private static boolean magicSquare(int[][] matrix) {
 
-        if ( rows != columns) {
+        if (matrix.length != matrix[0].length ) {
             return false;
         }
 
@@ -105,7 +101,7 @@ public class TDimensionalMatrixCalculation {
             controlSum += num;
         }
 
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             int rowMagicSum = 0;
             for (int j = 0; j < matrix.length; j++) {
                 rowMagicSum += matrix[i][j];
@@ -115,9 +111,9 @@ public class TDimensionalMatrixCalculation {
             }
         }
 
-        for (int j = 0; j < matrix.length; j++) {
+        for (int j = 0; j < matrix[0].length; j++) {
             int columnMagicSum = 0;
-            for (int i = 0; i < rows; i++) {
+            for (int i = 0; i < matrix.length; i++) {
                 columnMagicSum += matrix[i][j];
             }
             if (columnMagicSum != controlSum) {
@@ -126,7 +122,7 @@ public class TDimensionalMatrixCalculation {
         }
 
         int firstDiagonalSum = 0;
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             firstDiagonalSum += matrix[i][i];
         }
         if (firstDiagonalSum != controlSum) {
@@ -134,8 +130,8 @@ public class TDimensionalMatrixCalculation {
         }
 
         int secondaryDiagonalSum = 0;
-        for (int i = 0; i < rows; i++) {
-            secondaryDiagonalSum += matrix[i][rows - 1 - i];
+        for (int i = 0; i < matrix.length; i++) {
+            secondaryDiagonalSum += matrix[i][matrix.length - 1 - i];
         }
         if (secondaryDiagonalSum != controlSum) {
             return false;
