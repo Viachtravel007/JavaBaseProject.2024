@@ -77,8 +77,8 @@ public class MethodsList {
         return new String(chars);
     }
 
-    public static double power(int a, int b) {
-        return (float) Math.pow(a, b);
+    public static double power(int base, int exponent) {
+        return (float) Math.pow(base, exponent);
     }
 
     public static void printTextNTimes(int times, String text) {
