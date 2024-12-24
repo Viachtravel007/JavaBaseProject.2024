@@ -33,18 +33,18 @@ public class MethodsList {
         String inputString = scanner.nextLine();
         System.out.println("reversed string: " + reverseString(inputString));
 
-        System.out.print("enter a: ");
-        int a = scanner.nextInt();
-        System.out.print("enter b: ");
-        int b = scanner.nextInt();
-        System.out.println("the result of " + a + "^" + b + " is " + power(a, b));
+        System.out.print("Enter the base: ");
+        int base = scanner.nextInt();
+        System.out.print("Enter the exponent: ");
+        int exponent = scanner.nextInt();
+        System.out.println("The result of " + base + "^" + exponent + " is " + power(base, exponent));
 
-        System.out.print("enter an integer n: ");
-        int n = scanner.nextInt();
+        System.out.print("enter an integer number of times: ");
+        int times = scanner.nextInt();
         scanner.nextLine();
         System.out.print("enter a text string: ");
         String text = scanner.nextLine();
-        printTextNTimes(n, text);
+        printTextNTimes(times, text);
 
         scanner.close();
     }
@@ -67,18 +67,24 @@ public class MethodsList {
     }
 
     public static String reverseString(String input) {
-        return new StringBuilder(input).reverse().toString();
+        char[] chars = input.toCharArray();
+        int n = chars.length;
+        for (int i = 0; i < n / 2; i++) {
+            char temp = chars[i];
+            chars[i] = chars[n - 1 - i];
+            chars[n - 1 - i] = temp;
+        }
+        return new String(chars);
     }
 
-    public static int power(int a, int b) {
-        return (int) Math.pow(a, b);
+    public static double power(int a, int b) {
+        return (float) Math.pow(a, b);
     }
 
-    public static void printTextNTimes(int n, String text) {
-        for (int i = 0; i < n; i++) {
+    public static void printTextNTimes(int times, String text) {
+        for (int i = 0; i < times; i++) {
             System.out.println(text);
         }
     }
-
 }
 
