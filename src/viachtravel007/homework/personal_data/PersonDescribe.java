@@ -14,8 +14,6 @@ class PersonDescribe {
         System.out.println("\nName: " + person4.getName() + ", Age: " + person4.getAge() + ", Profession: " + person4.getProfession());
 
         person4.setProfession("Designer");
-
-        System.out.println("(After updating profession)");
         System.out.println("Name: " + person4.getName() + ", Age: " + person4.getAge() + ", Profession: " + person4.getProfession());
     }
 }
