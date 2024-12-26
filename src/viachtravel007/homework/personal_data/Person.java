@@ -26,4 +26,8 @@ public class Person {
     public void setProfession(String newProfession) {
         this.profession = newProfession;
     }
+
+    public void info() {
+        System.out.println("Name: " + name + ", Age: " + age + ", Profession: " + profession);
+    }
 }
