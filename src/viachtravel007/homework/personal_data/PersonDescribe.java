@@ -5,7 +5,8 @@ class PersonDescribe {
         Person[] persons = {
                 new Person("John", 30, "Engineer"),
                 new Person("Mary", 25, "Teacher"),
-                new Person("Bob", 35, "Doctor")
+                new Person("Bob", 35, "Doctor"),
+                new Person("Alice", 28, "Architect")
         };
 
         for (Person person : persons) {
@@ -13,10 +14,9 @@ class PersonDescribe {
         }
 
         System.out.println();
-        Person person4 = new Person("Alice", 28, "Architect");
-        person4.info();
+        persons[3].info();
+        persons[3].setProfession("Designer");
 
-        person4.setProfession("Designer");
-        person4.info();
+        persons[3].info();
     }
 }
