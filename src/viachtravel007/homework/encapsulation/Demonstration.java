@@ -3,10 +3,10 @@ package viachtravel007.homework.encapsulation;
 public class Demonstration {
     public static void main(String[] args) {
         Employee employee = new Employee(
-                "John Doe",
+                "Amanda Clark",
                 "Manager",
-                "johndoe@example.com",
-                "+123456789",
+                "amanda.clark123@zoho.com",
+                "+1 (202) 555-0147",
                 30
         );
 
