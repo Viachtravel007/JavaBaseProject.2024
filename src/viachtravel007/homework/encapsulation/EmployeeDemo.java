@@ -1,6 +1,6 @@
 package viachtravel007.homework.encapsulation;
 
-public class Demonstration {
+public class EmployeeDemo {
     public static void main(String[] args) {
         Employee employee = new Employee(
                 "Amanda Clark",

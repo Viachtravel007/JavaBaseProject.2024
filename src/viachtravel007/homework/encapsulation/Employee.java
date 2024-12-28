@@ -35,6 +35,27 @@ public class Employee {
         return age;
     }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
     public String toString() {
         return "Full Name: " + fullName + "\n" +
                 "Position: " + position + "\n" +
