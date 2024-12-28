@@ -1,6 +1,6 @@
 package viachtravel007.homework.calculation_areas;
 
-public class WithdrawalAreas {
+public class OutputAreas {
     public static void main(String[] args) {
         ShapeCreator shapeFactory = new ShapeCreator();
 
