@@ -19,7 +19,7 @@ public class DayAdvice implements Advice {
                 System.out.println("Visit the best places for a weekend getaway!");
                 break;
             default:
-                System.out.println("Invalid day.");
+                break;
         }
     }
 }

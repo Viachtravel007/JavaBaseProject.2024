@@ -2,10 +2,13 @@ package viachtravel007.homework.diary_advisor;
 
 public class AdviceDemo {
     public static void main(String[] args) {
-        DayAdvice dayAdvice = new DayAdvice();
+        EnteringDay enteringDay = new EnteringDay();
 
-        dayAdvice.advise(Days.MONDAY);
-        dayAdvice.advise(Days.FRIDAY);
-        dayAdvice.advise(Days.SUNDAY);
+        Days day = enteringDay.getDayFromUser();
+
+        if (day != null) {
+            DayAdvice dayAdvice = new DayAdvice();
+            dayAdvice.advise(day);
+        }
     }
 }
