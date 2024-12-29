@@ -2,6 +2,8 @@ package viachtravel007.homework.diary_advisor;
 
 public class DayAdvice implements Advice {
 
+    private PlacesToVisit placesToVisit = new PlacesToVisit();
+
     @Override
     public void advise(Days day) {
         switch (day) {
@@ -16,7 +18,7 @@ public class DayAdvice implements Advice {
                 break;
             case SATURDAY:
             case SUNDAY:
-                System.out.println("Visit the best places for a weekend getaway!");
+                System.out.println("Visit " + placesToVisit.getRandomPlace() + " today!");
                 break;
             default:
                 break;
